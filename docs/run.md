@@ -50,6 +50,17 @@ To run functions that use these scopes, you must add the scopes to your Apps Scr
 
 - `clasp open`
 - `File > Project Properties > Scopes`
-- Add these scopes to your `appsscript.json`.
+- Add these scopes to your `appsscript.json`:
+
+```json
+{
+  // ...
+  "oauthScopes": [
+    "https://www.googleapis.com/auth/spreadsheets.readonly",
+    "https://www.googleapis.com/auth/userinfo.email"
+  ]
+}
+```
+
 - Log in again: `clasp login --creds creds.json`. This will add these scopes to your credentials.
 - `clasp run sendMail`
